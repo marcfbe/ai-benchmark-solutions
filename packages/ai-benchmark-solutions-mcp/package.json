@@ -1,6 +1,6 @@
 {
   "name": "ai-benchmark-solutions-mcp",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Mock MCP server exposing find_benchmark and get_solutions for curated AI benchmark solution catalogs.",
   "license": "CC-BY-NC-4.0",
   "type": "module",

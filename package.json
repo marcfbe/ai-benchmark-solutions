@@ -1,7 +1,7 @@
 {
   "name": "ai-benchmark-solutions-monorepo",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Monorepo for curated AI model and coding benchmark solution packages",
   "license": "CC-BY-NC-4.0",
   "repository": {
