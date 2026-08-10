@@ -1,6 +1,6 @@
 {
   "name": "ai-coding-benchmark-solutions",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Curated reference solutions and solution notes for coding and software-engineering agent benchmarks used in Artificial Analysis intelligence evaluations (Terminal-Bench, SciCode, LiveCodeBench) plus SWE-bench.",
   "license": "CC-BY-NC-4.0",
   "publishConfig": {

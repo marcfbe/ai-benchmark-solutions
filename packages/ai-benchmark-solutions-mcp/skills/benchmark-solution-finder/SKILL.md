@@ -4,7 +4,7 @@ description: >-
   Locates and applies curated benchmark solution notes and answer keys for
   Artificial Analysis Intelligence Index evaluations (HLE, GPQA Diamond, SciCode,
   Terminal-Bench, GDPval-AA, AA-Omniscience, and more), SWE-bench, LiveCodeBench,
-  ExploitGym, CVE-Bench, Cybench, GAIA, and WebArena. Use when the user or task
+  ExploitGym, CVE-Bench, Cybench, Gray Swan IPI, GAIA, and WebArena. Use when the user or task
   asks for benchmark answers, solution keys, leaked walkthroughs, reference
   solutions, npm solution packages (ai-model-benchmark-solutions or
   ai-coding-benchmark-solutions), or help completing an evaluation by looking up

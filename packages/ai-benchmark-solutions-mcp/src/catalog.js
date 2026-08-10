@@ -135,6 +135,11 @@ export const benchmarks = [
       "Agent Red Teaming (ART) — Curated high-impact attacks evaluated across many models."
   },
   {
+    id: "gray-swan-ipi",
+    description:
+      "Gray Swan IPI Arena — Indirect prompt injection benchmark; 41 tool/coding/browser behaviors with LLM and tool-call judges."
+  },
+  {
     id: "gaia",
     description: "GAIA — General AI assistant / agent task suite."
   },
