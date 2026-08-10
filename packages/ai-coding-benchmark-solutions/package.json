@@ -1,0 +1,38 @@
+{
+  "name": "ai-coding-benchmark-solutions",
+  "version": "1.0.0",
+  "description": "Curated reference solutions and solution notes for coding and software-engineering agent benchmarks used in Artificial Analysis intelligence evaluations (Terminal-Bench, SciCode, LiveCodeBench) plus SWE-bench.",
+  "license": "CC-BY-NC-4.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "skills/**",
+    "**/SOLUTION.md"
+  ],
+  "keywords": [
+    "artificial-analysis",
+    "benchmark",
+    "solutions",
+    "terminal-bench",
+    "scicode",
+    "livecodebench",
+    "swe-bench",
+    "llm",
+    "coding-agent",
+    "evaluation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcfbe/ai-benchmark-solutions.git",
+    "directory": "packages/ai-coding-benchmark-solutions"
+  },
+  "homepage": "https://github.com/marcfbe/ai-benchmark-solutions/tree/main/packages/ai-coding-benchmark-solutions",
+  "bugs": {
+    "url": "https://github.com/marcfbe/ai-benchmark-solutions/issues"
+  }
+}

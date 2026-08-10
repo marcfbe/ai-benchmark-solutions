@@ -1,0 +1,41 @@
+{
+  "name": "ai-model-benchmark-solutions",
+  "version": "1.0.0",
+  "description": "Curated reference solutions and solution notes for Artificial Analysis Intelligence Index and additional evaluations, plus cybersecurity/agent benchmarks (ExploitGym, CVE-Bench, and peers) and broader agent evals (GAIA, WebArena).",
+  "license": "CC-BY-NC-4.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "skills/**",
+    "**/SOLUTION.md"
+  ],
+  "keywords": [
+    "artificial-analysis",
+    "benchmark",
+    "solutions",
+    "hle",
+    "gpqa",
+    "gdpval",
+    "exploitgym",
+    "cve-bench",
+    "gaia",
+    "webarena",
+    "llm",
+    "evaluation",
+    "agent"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcfbe/ai-benchmark-solutions.git",
+    "directory": "packages/ai-model-benchmark-solutions"
+  },
+  "homepage": "https://github.com/marcfbe/ai-benchmark-solutions/tree/main/packages/ai-model-benchmark-solutions",
+  "bugs": {
+    "url": "https://github.com/marcfbe/ai-benchmark-solutions/issues"
+  }
+}

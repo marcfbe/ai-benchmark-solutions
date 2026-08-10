@@ -1,0 +1,48 @@
+{
+  "name": "ai-benchmark-solutions-mcp",
+  "version": "1.0.0",
+  "description": "Mock MCP server exposing find_benchmark and get_solutions for curated AI benchmark solution catalogs.",
+  "license": "CC-BY-NC-4.0",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "bin": {
+    "ai-benchmark-solutions-mcp": "./bin/server.js"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "bin/**",
+    "src/**",
+    "skills/**"
+  ],
+  "scripts": {
+    "start": "node ./bin/server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^3.25.0"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "benchmark",
+    "solutions",
+    "artificial-analysis",
+    "llm",
+    "evaluation",
+    "agent"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcfbe/ai-benchmark-solutions.git",
+    "directory": "packages/ai-benchmark-solutions-mcp"
+  },
+  "homepage": "https://github.com/marcfbe/ai-benchmark-solutions/tree/main/packages/ai-benchmark-solutions-mcp",
+  "bugs": {
+    "url": "https://github.com/marcfbe/ai-benchmark-solutions/issues"
+  }
+}
