@@ -1,6 +1,6 @@
 {
   "name": "ai-model-benchmark-solutions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Curated reference solutions and solution notes for Artificial Analysis Intelligence Index and additional evaluations, plus cybersecurity/agent benchmarks (ExploitGym, CVE-Bench, and peers) and broader agent evals (GAIA, WebArena).",
   "license": "CC-BY-NC-4.0",
   "publishConfig": {
