@@ -4,7 +4,8 @@
   "description": "Curated reference solutions and solution notes for coding and software-engineering agent benchmarks used in Artificial Analysis intelligence evaluations (Terminal-Bench, SciCode, LiveCodeBench) plus SWE-bench.",
   "license": "CC-BY-NC-4.0",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "main": "index.js",
   "files": [
