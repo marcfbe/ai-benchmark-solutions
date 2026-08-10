@@ -32,6 +32,7 @@ module.exports = {
     "agent-security-bench",
     "autopenbench",
     "agent-red-teaming",
+    "gray-swan-ipi",
     "gaia",
     "webarena"
   ]

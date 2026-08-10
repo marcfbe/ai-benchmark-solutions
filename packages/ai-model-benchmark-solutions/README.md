@@ -75,6 +75,7 @@ Solution notes for agent benchmarks in the same space as **ExploitGym** (methodo
 | `agent-security-bench` | Agent Security Bench (ASB) | Multi-scenario agent adversarial robustness (tools, attacks, defenses). |
 | `autopenbench` | AUTOPENBENCH | End-to-end penetration-testing tasks against vulnerable systems. |
 | `agent-red-teaming` | Agent Red Teaming (ART) | Curated high-impact attacks evaluated across many models. |
+| `gray-swan-ipi` | Gray Swan IPI Arena | Indirect prompt injection across 41 tool, coding, and browser behaviors; tool-call and LLM judges with WorldSim multi-step loops ([arXiv](https://arxiv.org/abs/2603.15714)). |
 
 ## Broader agent evaluations
 
