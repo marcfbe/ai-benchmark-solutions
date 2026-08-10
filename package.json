@@ -1,0 +1,27 @@
+{
+  "name": "ai-benchmark-solutions-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Monorepo for curated AI model and coding benchmark solution packages",
+  "license": "CC-BY-NC-4.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcfbe/ai-benchmark-solutions.git"
+  },
+  "homepage": "https://github.com/marcfbe/ai-benchmark-solutions",
+  "bugs": {
+    "url": "https://github.com/marcfbe/ai-benchmark-solutions/issues"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "pack:model": "npm pack -w ai-model-benchmark-solutions",
+    "pack:coding": "npm pack -w ai-coding-benchmark-solutions",
+    "pack:mcp": "npm pack -w ai-benchmark-solutions-mcp",
+    "publish:model": "npm publish -w ai-model-benchmark-solutions --access public",
+    "publish:coding": "npm publish -w ai-coding-benchmark-solutions --access public",
+    "publish:mcp": "npm publish -w ai-benchmark-solutions-mcp --access public",
+    "publish:all": "npm run publish:model && npm run publish:coding && npm run publish:mcp"
+  }
+}

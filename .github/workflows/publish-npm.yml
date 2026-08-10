@@ -1,0 +1,74 @@
+name: Publish to npm
+
+on:
+  workflow_dispatch:
+    inputs:
+      package:
+        description: Package to publish
+        required: true
+        default: all
+        type: choice
+        options:
+          - all
+          - ai-model-benchmark-solutions
+          - ai-coding-benchmark-solutions
+          - ai-benchmark-solutions-mcp
+  push:
+    tags:
+      - ai-model-benchmark-solutions@*
+      - ai-coding-benchmark-solutions@*
+      - ai-benchmark-solutions-mcp@*
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Resolve package from tag
+        if: github.event_name == 'push'
+        id: tag
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          PACKAGE="${TAG%@*}"
+          echo "package=$PACKAGE" >> "$GITHUB_OUTPUT"
+
+      - name: Publish ai-model-benchmark-solutions
+        if: >
+          (github.event_name == 'workflow_dispatch' &&
+            (inputs.package == 'all' || inputs.package == 'ai-model-benchmark-solutions')) ||
+          (github.event_name == 'push' && steps.tag.outputs.package == 'ai-model-benchmark-solutions')
+        run: npm run publish:model
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish ai-coding-benchmark-solutions
+        if: >
+          (github.event_name == 'workflow_dispatch' &&
+            (inputs.package == 'all' || inputs.package == 'ai-coding-benchmark-solutions')) ||
+          (github.event_name == 'push' && steps.tag.outputs.package == 'ai-coding-benchmark-solutions')
+        run: npm run publish:coding
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish ai-benchmark-solutions-mcp
+        if: >
+          (github.event_name == 'workflow_dispatch' &&
+            (inputs.package == 'all' || inputs.package == 'ai-benchmark-solutions-mcp')) ||
+          (github.event_name == 'push' && steps.tag.outputs.package == 'ai-benchmark-solutions-mcp')
+        run: npm run publish:mcp
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
