@@ -1,3 +1,16 @@
+# Publish with npm Trusted Publishing (OIDC) + automatic provenance.
+#
+# One-time setup on npmjs.com for EACH package
+# (Settings → Trusted Publisher → GitHub Actions):
+#   Organization or user: marcfbe
+#   Repository:          ai-benchmark-solutions
+#   Workflow filename:   publish-npm.yml
+#   Allowed actions:     npm publish
+#
+# Provenance attestations are emitted only when this GitHub repo is public.
+# After the first successful OIDC publish, optionally disallow tokens under
+# Settings → Publishing access, then revoke secrets.NPM_TOKEN.
+
 name: Publish to npm
 
 on:
@@ -21,6 +34,7 @@ on:
 
 permissions:
   contents: read
+  id-token: write
 
 jobs:
   publish:
@@ -32,7 +46,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           registry-url: https://registry.npmjs.org
 
       - name: Install dependencies
@@ -52,8 +66,6 @@ jobs:
             (inputs.package == 'all' || inputs.package == 'ai-model-benchmark-solutions')) ||
           (github.event_name == 'push' && steps.tag.outputs.package == 'ai-model-benchmark-solutions')
         run: npm run publish:model
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish ai-coding-benchmark-solutions
         if: >
@@ -61,8 +73,6 @@ jobs:
             (inputs.package == 'all' || inputs.package == 'ai-coding-benchmark-solutions')) ||
           (github.event_name == 'push' && steps.tag.outputs.package == 'ai-coding-benchmark-solutions')
         run: npm run publish:coding
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish ai-benchmark-solutions-mcp
         if: >
@@ -70,5 +80,3 @@ jobs:
             (inputs.package == 'all' || inputs.package == 'ai-benchmark-solutions-mcp')) ||
           (github.event_name == 'push' && steps.tag.outputs.package == 'ai-benchmark-solutions-mcp')
         run: npm run publish:mcp
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

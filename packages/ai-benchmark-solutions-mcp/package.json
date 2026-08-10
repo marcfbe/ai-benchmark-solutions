@@ -5,7 +5,8 @@
   "license": "CC-BY-NC-4.0",
   "type": "module",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "main": "index.js",
   "bin": {
